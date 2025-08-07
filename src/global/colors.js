@@ -5,7 +5,7 @@ export const colors = {
     "text-input": "#000000",
     "btn": "#AAD08B",
     "btn-text":"#445F4B",
-    "cards": "#D7F5C6",
+    "cards": "#C4DEAB",
     "cards-shadow": "#7D9D86",
     "switch-on": "#E9EACC",
     "switch-off": "#DEE0B3"

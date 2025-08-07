@@ -22,7 +22,7 @@ Antes de instalar y ejecutar la aplicación, es necesario que tengas instalado l
 1. Cloná el repositorio mediante git clone https://github.com/distefanop/rnProyectoFinal
 2. Ejecutá el comando `cd rnProyectoFinal` para ir a la carpeta del proyecto
 3. Instalá las dependencias con el comando `npm install`
-4. Creá un archivo llamado .env en la raíz del proyecto y configurar las variables de entorno para Firebase
+4. Creá un archivo llamado .env en la raíz del proyecto y configurá las variables de entorno para Firebase
 5. Iniciá la aplicación en modo desarrollo con el comando `npx expo start` 
 6. Abrí la aplicación en un emulador o en un celular con Expo Go
 

@@ -9,6 +9,7 @@ const ProductScreen = ({ route }) => {
     const { product } = route.params;
     const { width } = useWindowDimensions();
     const [quantity, setQuantity] = useState(1);
+    const [added, setAdded] = useState(false);
 
     const dispatch = useDispatch();
 
@@ -18,11 +19,16 @@ const ProductScreen = ({ route }) => {
 
     const handleAddToCart = () => {
         dispatch(addItems({ product: product, quantity: quantity }));
+        setAdded(true);
+
+        setTimeout(() => {
+            setAdded(false);
+        }, 1000);
     };
 
     return (
         <ScrollView style={styles.productContainer}>
-            <Text style={styles.textTitle}>{product.name}</Text>
+            {/* <Text style={styles.textTitle}>{product.name}</Text> */}
             <View style={{ width: width * .56, height: width * .56, alignSelf: 'center', borderRadius: 30, overflow: 'hidden' }}>
                 <Image
                     source={{ uri: product.img }}
@@ -39,7 +45,9 @@ const ProductScreen = ({ route }) => {
             <Pressable
                 style={({ pressed }) => [{ opacity: pressed ? 0.95 : 1 }, styles.addToCartButton]}
                 onPress={handleAddToCart}>
-                <Text style={styles.textAddToCart}>Agregar al carrito</Text>
+                <Text style={styles.textAddToCart}>
+                    {added ? "Producto agregado" : "Agregar al carrito"}
+                </Text>
             </Pressable>
         </ScrollView>
     );

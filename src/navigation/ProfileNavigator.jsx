@@ -9,7 +9,7 @@ export default function ProfileNavigator() {
         <Stack.Navigator
             initialRouteName='Perfil'
             screenOptions={{
-                header: ({ route }) => <Header title="🌵 SuculentApp 🌵" />
+                header: () => <Header title="🌵 SuculentApp 🌵" subtitle={"Mi Perfil"}/>
             }}
         >
             <Stack.Screen name="Perfil" component={ProfileScreen} />

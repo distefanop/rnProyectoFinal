@@ -28,30 +28,25 @@ const SignupScreen = ({ navigation }) => {
         signup({ email, password, returnSecureToken: true });
     };
 
-    useEffect(() => {
-        if (data) {
-            console.log("Usuario registrado con éxito:", data);
-            navigation.navigate('Login', { signupSuccess: true });
-        }
-        if (isError && signupError) {
-            const errorMessage = signupError?.data?.error?.message;
-            if (errorMessage) {
-                switch (errorMessage) {
-                    case 'EMAIL_EXISTS':
-                        setError("El email ya está registrado.");
-                        break;
-                    case 'WEAK_PASSWORD':
-                        setError("La contraseña debe tener al menos 6 caracteres.");
-                        break;
-                    default:
-                        setError("Ocurrió un error al registrar. Intenta de nuevo.");
-                        break;
-                }
+useEffect(() => {
+    if (data) {
+        navigation.navigate('Login', { signupSuccess: true });
+    }
+    if (isError && signupError) {
+        const errorMessage = signupError?.data?.error?.message;
+        if (errorMessage) {
+            if (errorMessage.includes('WEAK_PASSWORD')) {
+                setError("La contraseña debe tener al menos 6 caracteres");
+            } else if (errorMessage.includes('EMAIL_EXISTS')) {
+                setError("El email ya está registrado");
             } else {
-                setError("Ocurrió un error al registrar. Intenta de nuevo.");
+                setError("Ocurrió un error. Intentá de nuevo");
             }
+        } else {
+            setError("Ocurrió un error. Intentá de nuevo");
         }
-    }, [data, isError, signupError, navigation]);
+    }
+}, [data, isError, signupError, navigation]);
 
     return (
         <View style={styles.container}>
@@ -149,5 +144,13 @@ const styles = StyleSheet.create({
         color: colors['btn-text'],
         fontSize: 16,
         fontFamily: 'NataSans-Bold',
-    }
+    },
+        errorText: {
+        color: 'red',
+        marginTop: 10,
+        marginBottom: 10,
+        textAlign: 'center',
+        fontFamily: 'NataSans-Bold',
+        fontSize: 14
+    },
 })

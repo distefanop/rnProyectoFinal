@@ -65,7 +65,6 @@ const LoginScreen = ({ navigation, route }) => {
                     break;
                 default:
                     setError("Ocurrió un error al iniciar sesión. Intenta de nuevo.");
-                    console.log("Error de login desconocido:", loginError);
                     break;
             }
         }

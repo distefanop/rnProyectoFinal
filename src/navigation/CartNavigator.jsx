@@ -8,7 +8,7 @@ export default function CartNavigator() {
     return (
         <Stack.Navigator
             initialRouteName='Carrito'
-            screenOptions={{ header: ({ route }) => <Header title="🌵 SuculentApp 🌵" /> }}>
+            screenOptions={{ header: ({ route }) => <Header title="🌵 SuculentApp 🌵" subtitle={"Mi Carrito"}/> }}>
 
             <Stack.Screen name="Carrito" component={CartScreen} />
         </Stack.Navigator>

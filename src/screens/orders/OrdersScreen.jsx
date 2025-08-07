@@ -36,7 +36,7 @@ const OrdersScreen = () => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Mis Ordenes</Text>
+            {/* <Text style={styles.title}>Mis Ordenes</Text> */}
             <FlatList
                 data={orders}
                 keyExtractor={item => item.id}
@@ -84,12 +84,12 @@ const styles = StyleSheet.create({
     },
     orderDate: {
         fontSize: 14,
-        color: 'gray',
+        color: colors['text-input'],
         fontFamily: 'NataSans-Light',
     },
     orderId: {
         fontSize: 12,
-        color: 'gray',
+        color: colors['text-input'],
         fontFamily: 'NataSans-Light',
     },
     orderTotal: {

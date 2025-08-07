@@ -26,21 +26,30 @@ const Header = ({ title, subtitle }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{title}</Text>
-      <Text style={styles.subtitle}>{subtitle}</Text>
+      <View style={styles.titleContainer}>
+        <Text style={styles.title}>{title}</Text>
+      </View>
       {
         user
         &&
-        <Pressable onPress={handleClearSession}>
-          <Text style={styles.logOut}>Cerrar Sesión</Text>
-        </Pressable>
+        <View style={styles.logOutContainer}>
+          <Pressable onPress={handleClearSession}>
+            <Text style={styles.logOut}>Cerrar Sesión</Text>
+          </Pressable>
+        </View>
       }
       {
         canGoBack &&
-        <Pressable onPress={() => navigation.goBack()}>
-          <Ionicons name="return-down-back" size={32} color={colors['btn-text']} />
-        </Pressable>
+        <View style={styles.goBackContainer}>
+          <Pressable onPress={() => navigation.goBack()}>
+            <Ionicons name="return-down-back" size={32} color={colors['btn-text']} />
+          </Pressable>
+        </View>
+
       }
+      <View style={styles.subtitleContainer}>
+        <Text style={styles.subtitle}>{subtitle}</Text>
+      </View>
     </View>
   )
 }
@@ -52,17 +61,36 @@ const styles = StyleSheet.create({
     height: 200,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: colors['secondary-color']
+    backgroundColor: colors['secondary-color'],
+    position: 'relative',
+  },
+  titleContainer: {
+    position: 'absolute',
+    top: 50,
   },
   title: {
     fontSize: 32,
     fontFamily: 'Sacramento-Regular'
   },
+  subtitleContainer: {
+    position: 'absolute',
+    bottom: 5,
+  },
   subtitle: {
     fontFamily: 'NataSans-Bold',
+    paddingTop: 15,
+    fontSize: 20
+  },
+  logOutContainer: {
+    position: 'absolute',
+    top: 95,
   },
   logOut: {
     fontFamily: 'NataSans-Light',
     color: colors['btn-text']
+  },
+  goBackContainer: {
+    position: 'absolute',
+    top: 120,
   }
 })

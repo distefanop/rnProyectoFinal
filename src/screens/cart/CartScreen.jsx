@@ -78,7 +78,6 @@ const CartScreen = () => {
                     data={cartItems}
                     keyExtractor={item => item.id}
                     renderItem={renderCartItem}
-                    ListHeaderComponent={<Text style={styles.cartScreenTitle}>Mi carrito</Text>}
                     ListFooterComponent={<FooterComponent />}
                     style={styles.flatlist}
                 />
