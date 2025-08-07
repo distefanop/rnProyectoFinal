@@ -1,0 +1,57 @@
+[
+    {
+        "id": "01",
+        "name": "Sedum Rubrotinctum Aurora",
+        "price": 1000,
+        "description": "Maceta N° 8",
+        "stock": 15,
+        "category": "suculentas",
+        "img": "https://cactuscoleccion.com/wp-content/uploads/2024/01/IMG_8552-scaled.jpeg"
+    },
+        {
+        "id": "02",
+        "name": "Cotyledon Orbiculata Oophylla",
+        "price": 3000,
+        "description": "Maceta N° 10",
+        "stock": 5,
+        "category": "suculentas",
+        "img": "https://todoparatuhuerta.com/wp-content/uploads/2022/07/Cotyledon-orbiculata-oophylla.jpg"
+    },
+    {
+        "id": "03",
+        "name": "Opuntia Basilaris",
+        "price": 2000,
+        "description": "Maceta N° 10",
+        "stock": 4,
+        "category": "cactus",
+        "img": "https://cdn11.bigcommerce.com/s-oqm1pc/images/stencil/1280x1280/products/2633/5716/opuntia_caulidata__89569.1595271397.jpg?c=3"
+    },
+        {
+        "id": "04",
+        "name": "Tephrocactus Geometricus",
+        "price": 8000,
+        "description": "Maceta N° ",
+        "stock": 10,
+        "category": "cactus",
+        "img": "https://i.pinimg.com/736x/15/f4/1e/15f41e9604241255bf59d1854cb6cc8f.jpg"
+    },
+    {
+        "id": "05",
+        "name": "Maceta Perezoso",
+        "price": 10000,
+        "description": "Maceta N° 10",
+        "stock": 6,
+        "category": "insumos",
+        "img": "https://http2.mlstatic.com/D_998051-MLA72855822595_112023-O.jpg"
+    },
+        {
+        "id": "06",
+        "name": "Set de Herramientas",
+        "price": 3000,
+        "description": "El set incluye: 1 pala de cubeta, 1 pala, 1 pala puntiaguda y 1 removedor de plántulas.",
+        "stock": 12,
+        "category": "insumos",
+        "img": "https://images.nexusapp.co/assets/c8/03/56/113604748.jpg"
+    }
+]
+
